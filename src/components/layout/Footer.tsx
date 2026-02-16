@@ -26,11 +26,11 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="font-serif text-xl font-semibold">St. Peters Church</h3>
-                <p className="text-sm text-primary-foreground/70">Cuddalore</p>
+                <p className="text-sm text-primary-foreground/70">Cathedral</p>
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              A beacon of faith, hope, and love serving the Cuddalore community for over a century. 
+              A beacon of faith, hope, and love serving the Cathedral community for over a century.
               Join us in worship and fellowship.
             </p>
           </div>
@@ -86,19 +86,21 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-gold-light flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  Church Street, Cuddalore,<br />Tamil Nadu, India - 607001
+                  St Peter's Cathedral,Gnanapuram<br />Visakhapatnam - 530 004, Andhra Pradesh,India.
                 </span>
+
+
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-gold-light flex-shrink-0" />
                 <a href="tel:+914142123456" className="text-primary-foreground/80 hover:text-gold-light transition-colors">
-                  +91 4142 123456
+                  +91 98490 07248
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-gold-light flex-shrink-0" />
                 <a href="mailto:info@stpeterschurch.in" className="text-primary-foreground/80 hover:text-gold-light transition-colors">
-                  info@stpeterschurch.in
+                  stpeterscathedral22@gmail.com
                 </a>
               </li>
             </ul>
@@ -138,7 +140,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10 py-6">
         <div className="container-church px-4 text-center">
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} St. Peters Church, Cuddalore. All rights reserved.
+            © {new Date().getFullYear()} St. Peters Church, Cathedral. All rights reserved.
           </p>
         </div>
       </div>

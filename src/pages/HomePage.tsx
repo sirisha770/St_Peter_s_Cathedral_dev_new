@@ -9,36 +9,35 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${churchHeroImage})` }}
+          style={{ backgroundImage: "url('/images/66.jpg')" }}
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/70 to-navy/90" />
-        
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/70 to-navy/90" /> */}
+
         {/* Content */}
-        <div className="relative z-10 container-church px-4 text-center text-primary-foreground">
+        <div className="relative z-10 container-church px-4 text-center text-white">
           <div className="max-w-4xl mx-auto animate-slide-up">
             {/* Cross Icon */}
-            <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-gold animate-float">
+            {/* <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-gold animate-float">
               <Cross className="w-8 h-8 md:w-10 md:h-10 text-navy-dark" />
-            </div>
+            </div> */}
 
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Rebuilding <span className="text-gradient-gold">St. Peters Church</span>, Cuddalore
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-left text-white whitespace-nowrap">
+              St. Peter&apos;s Cathedral, Gnanapuram
             </h1>
-            
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-4 max-w-2xl mx-auto">
+            {/* <p className="text-lg md:text-xl text-white/90 font-bold mb-4 max-w-2xl mx-auto">
               Be Part of God's Work
-            </p>
-            
-            <p className="text-base md:text-lg text-primary-foreground/70 mb-10 max-w-xl mx-auto">
-              Join us in restoring this historic place of worship. Together, we can rebuild 
+            </p> */}
+
+            <p className=" font-['Times_New_Roman'] text-base md:text-lg text-white/100  mb-10 max-w-xl mx-auto">
+              Join us in restoring this historic place of worship. Together, we can rebuild
               a sanctuary for generations to come.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/donate" className="gap-2">
                   <Heart className="w-5 h-5" />
@@ -56,7 +55,7 @@ const HomePage = () => {
                   Prayer Requests
                 </Link>
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -79,8 +78,8 @@ const HomePage = () => {
               A Legacy of Faith Since 1892
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              For over 130 years, St. Peters Church has been a spiritual home for the people of 
-              Cuddalore. Our historic church stands as a testament to the enduring faith of 
+              For over 130 years, St. Peters Church has been a spiritual home for the people of
+              Cathedral. Our historic church stands as a testament to the enduring faith of
               generations who have worshipped within its walls.
             </p>
           </div>
@@ -91,7 +90,7 @@ const HomePage = () => {
               {
                 icon: Church,
                 title: "Historic Heritage",
-                description: "A cherished landmark in Cuddalore with rich architectural and spiritual heritage dating back to the British colonial era.",
+                description: "A cherished landmark inCathedral with rich architectural and spiritual heritage dating back to the British colonial era.",
               },
               {
                 icon: Users,
@@ -130,14 +129,14 @@ const HomePage = () => {
             {/* Decorative Elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold/5 rounded-full blur-3xl" />
-            
+
             <div className="relative z-10 max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
                 Help Us Rebuild <span className="text-gradient-gold">God's House</span>
               </h2>
               <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-                Our beloved church needs urgent restoration. With your generous support, 
-                we can preserve this sacred space for future generations. Every contribution, 
+                Our beloved church needs urgent restoration. With your generous support,
+                we can preserve this sacred space for future generations. Every contribution,
                 big or small, brings us closer to our goal.
               </p>
 
@@ -148,7 +147,7 @@ const HomePage = () => {
                   <span className="text-primary-foreground/60">Goal: ₹1,00,00,000</span>
                 </div>
                 <div className="h-3 bg-primary-foreground/10 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-gradient-to-r from-gold to-gold-light rounded-full transition-all duration-1000"
                     style={{ width: "45%" }}
                   />

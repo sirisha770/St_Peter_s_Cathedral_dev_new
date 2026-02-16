@@ -26,21 +26,26 @@ const DonatePage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark overflow-hidden"
+        style={{
+          backgroundImage: "url('/images/66.jpg')", backgroundSize: "100% auto", backgroundPosition: "center", width: "100%", height: "450px",
+        }}
+
+      >
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl" />
-        
+
         <div className="relative z-10 container-church px-4 text-center">
-          <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-gold">
+          {/* <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-gold">
             <Heart className="w-8 h-8 text-navy-dark" />
-          </div>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+          </div> */}
+          {/* <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             Support <span className="text-gradient-gold">God's Work</span>
-          </h1>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Your generosity helps us rebuild St. Peters Church and continue serving 
+          </h1> */}
+          {/* <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+            Your generosity helps us rebuild St. Peters Church and continue serving
             our community. Every contribution makes a difference.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -62,11 +67,10 @@ const DonatePage = () => {
                         <button
                           key={amount}
                           onClick={() => handleAmountSelect(amount)}
-                          className={`p-4 rounded-xl border-2 font-semibold transition-all ${
-                            selectedAmount === amount
-                              ? "border-gold bg-gold/10 text-gold"
-                              : "border-border bg-background text-foreground hover:border-gold/50"
-                          }`}
+                          className={`p-4 rounded-xl border-2 font-semibold transition-all ${selectedAmount === amount
+                            ? "border-gold bg-gold/10 text-gold"
+                            : "border-border bg-background text-foreground hover:border-gold/50"
+                            }`}
                         >
                           ₹{amount.toLocaleString()}
                         </button>
@@ -98,15 +102,13 @@ const DonatePage = () => {
                         <button
                           key={id}
                           onClick={() => setPaymentMethod(id)}
-                          className={`w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left ${
-                            paymentMethod === id
-                              ? "border-gold bg-gold/5"
-                              : "border-border bg-background hover:border-gold/50"
-                          }`}
+                          className={`w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left ${paymentMethod === id
+                            ? "border-gold bg-gold/5"
+                            : "border-border bg-background hover:border-gold/50"
+                            }`}
                         >
-                          <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                            paymentMethod === id ? "bg-gold" : "bg-muted"
-                          }`}>
+                          <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${paymentMethod === id ? "bg-gold" : "bg-muted"
+                            }`}>
                             <Icon className={`w-6 h-6 ${paymentMethod === id ? "text-navy-dark" : "text-muted-foreground"}`} />
                           </div>
                           <div className="flex-1">
@@ -195,7 +197,7 @@ const DonatePage = () => {
                       </div>
                       <div>
                         <Label htmlFor="phone">Phone</Label>
-                        <Input id="phone" placeholder="+91 98765 43210" className="mt-1" />
+                        <Input id="phone" placeholder="+91 12345 67890" className="mt-1" />
                       </div>
                       <div>
                         <Label htmlFor="pan">PAN (for 80G receipt)</Label>
@@ -220,23 +222,27 @@ const DonatePage = () => {
                 {/* Impact Card */}
                 <div className="bg-gradient-to-br from-navy to-navy-dark rounded-2xl p-6 text-primary-foreground mb-6">
                   <Cross className="w-10 h-10 text-gold mb-4" />
-                  <h3 className="font-serif text-xl font-bold mb-4">Your Impact</h3>
+                  <h3 className="font-serif text-xl font-bold mb-4">Your Contribution</h3>
                   <ul className="space-y-3 text-sm">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                      <span>Help restore a 130-year-old heritage church</span>
+                      <span>Name Of The Account : ST. PETERS CATHEDRAL</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                      <span>Preserve sacred spaces for future generations</span>
+                      <span>Account No :  0163053000020158 </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                      <span>Support community outreach programs</span>
+                      <span>Bank Name: SOUTH INDIAN BANK</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                      <span>Receive tax benefits under 80G</span>
+                      <span>IFSC Code : SIBL0000163</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                      <span>Branch : VISAKHAPATNAM</span>
                     </li>
                   </ul>
                 </div>
@@ -251,7 +257,7 @@ const DonatePage = () => {
                     <p className="text-sm text-muted-foreground">raised of ₹1,00,00,000</p>
                   </div>
                   <div className="h-3 bg-muted rounded-full overflow-hidden mb-2">
-                    <div 
+                    <div
                       className="h-full bg-gradient-to-r from-gold to-gold-light rounded-full"
                       style={{ width: "45%" }}
                     />

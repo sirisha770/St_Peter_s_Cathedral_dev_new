@@ -39,20 +39,24 @@ const PrayersPage = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark"
+        style={{
+          backgroundImage: "url('/images/67.jpg')", backgroundSize: "100% auto", backgroundPosition: "center", width: "100%", height: "400px",
+        }}
+      >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 border border-gold/30 rounded-full" />
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-gold/20 rounded-full" />
         </div>
         <div className="relative container-church px-4 text-center">
-          <Heart className="w-16 h-16 mx-auto mb-6 text-gold" />
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+          {/* <Heart className="w-16 h-16 mx-auto mb-6 text-gold" /> */}
+          {/* <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             Prayer <span className="text-gradient-gold">Requests</span>
-          </h1>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Share your prayer needs with our community. We believe in the power of 
+          </h1> */}
+          {/* <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+            Share your prayer needs with our community. We believe in the power of
             collective prayer and are here to support you.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -77,7 +81,7 @@ const PrayersPage = () => {
                         Prayer Request Submitted
                       </h3>
                       <p className="text-muted-foreground mb-6">
-                        Thank you for sharing your prayer request. Our church community 
+                        Thank you for sharing your prayer request. Our church community
                         will be praying for you.
                       </p>
                       <Button variant="gold" onClick={() => setSubmitted(false)}>
@@ -89,18 +93,18 @@ const PrayersPage = () => {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="name">Your Name (Optional)</Label>
-                          <Input 
-                            id="name" 
-                            placeholder="Enter your name" 
+                          <Input
+                            id="name"
+                            placeholder="Enter your name"
                             className="mt-1"
                           />
                         </div>
                         <div>
                           <Label htmlFor="email">Email (Optional)</Label>
-                          <Input 
-                            id="email" 
-                            type="email" 
-                            placeholder="your@email.com" 
+                          <Input
+                            id="email"
+                            type="email"
+                            placeholder="your@email.com"
                             className="mt-1"
                           />
                         </div>
@@ -108,7 +112,7 @@ const PrayersPage = () => {
 
                       <div>
                         <Label htmlFor="category">Prayer Category</Label>
-                        <select 
+                        <select
                           id="category"
                           className="w-full mt-1 h-10 px-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         >
@@ -134,13 +138,13 @@ const PrayersPage = () => {
                       </div>
 
                       <div className="flex items-start gap-3">
-                        <input 
-                          type="checkbox" 
-                          id="share" 
+                        <input
+                          type="checkbox"
+                          id="share"
                           className="mt-1 w-4 h-4 rounded border-border text-gold focus:ring-gold"
                         />
                         <Label htmlFor="share" className="text-sm text-muted-foreground">
-                          I consent to share my prayer request (name will be shown as first name only) 
+                          I consent to share my prayer request (name will be shown as first name only)
                           with the church community for collective prayer
                         </Label>
                       </div>

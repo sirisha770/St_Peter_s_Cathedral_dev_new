@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Reconstruction", path: "/reconstruction" },
-  { name: "Donate", path: "/donate" },
-  { name: "Events", path: "/events" },
   { name: "Prayers", path: "/prayers" },
   { name: "Gallery", path: "/gallery" },
+  { name: "Renovation", path: "/reconstruction" },
+  { name: "Donate", path: "/donate" },
+  { name: "Events", path: "/events" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -19,33 +19,37 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container-church">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b !bg-[#1c364f]">
+
+      <div className="container-church ">
         <div className="flex items-center justify-between h-16 md:h-20 px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-gold">
-              <Cross className="w-5 h-5 md:w-6 md:h-6 text-navy-dark" />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-gold border-2">
+              <img
+                src="/images/72.jpg"   // public folder lo unte
+                alt="St. Peter's Cathedral Logo"
+                className="w-full h-full object-cover rounded-full border-2 border-white"
+              />
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-serif text-lg md:text-xl font-semibold text-foreground leading-tight">
-                St. Peters Church
+              <h1 className="font-serif text-lg md:text-xl font-semibold text-white leading-tight">
+                St. Peter's Cathedral
               </h1>
-              <p className="text-xs text-muted-foreground">Cuddalore</p>
+              <p className="text-xs text-white/90">Gnanapuram</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1  ">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname === link.path
-                    ? "text-gold bg-gold/10"
-                    : "text-foreground/80 hover:text-gold hover:bg-muted"
-                }`}
+                className={`px-3 font-sans py-2 text-base font-medium rounded-md transition-colors ${location.pathname === link.path
+                  ? "text-white bg-white/20"
+                  : "text-white hover:bg-white/10"
+                  }`}
               >
                 {link.name}
               </Link>
@@ -53,7 +57,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center  gap-3">
             <Button variant="gold" size="default" asChild>
               <Link to="/donate">Donate Now</Link>
             </Button>
@@ -78,11 +82,10 @@ const Header = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 text-base font-medium rounded-md transition-colors ${
-                    location.pathname === link.path
-                      ? "text-gold bg-gold/10"
-                      : "text-foreground/80 hover:text-gold hover:bg-muted"
-                  }`}
+                  className={`px-4 py-3 text-base font-medium rounded-md transition-colors ${location.pathname === link.path
+                    ? "text-gold bg-gold/10"
+                    : "text-foreground/80 hover:text-gold hover:bg-muted"
+                    }`}
                 >
                   {link.name}
                 </Link>

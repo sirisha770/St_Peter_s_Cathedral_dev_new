@@ -6,7 +6,7 @@ const EventsPage = () => {
     {
       category: "Weekly Service",
       date: "Every Sunday",
-      time: "9:00 AM - 11:00 AM",
+      time: "6:30 AM, 8:30 AM, 6:00 PM (Telugu), 8:30 AM (English)",
       title: "Sunday Holy Mass",
       description: "Join us for our weekly celebration of the Eucharist with hymns, readings, and communion.",
       location: "Main Sanctuary",
@@ -14,7 +14,7 @@ const EventsPage = () => {
     },
     {
       category: "Prayer",
-      date: "Every Wednesday",
+      date: "Weekdays",
       time: "6:30 PM - 8:00 PM",
       title: "Midweek Prayer Meeting",
       description: "Come together for an evening of prayer, worship, and fellowship.",
@@ -93,16 +93,20 @@ const EventsPage = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark"
+        style={{
+          backgroundImage: "url('/images/66.jpg')", backgroundSize: "100% auto", backgroundPosition: "center", width: "100%", height: "450px",
+        }}
+      >
         <div className="container-church px-4 text-center">
-          <Calendar className="w-16 h-16 mx-auto mb-6 text-gold" />
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+          {/* <Calendar className="w-16 h-16 mx-auto mb-6 text-gold" /> */}
+          {/* <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             Church <span className="text-gradient-gold">Events</span>
-          </h1>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Join us for worship services, prayer meetings, and community gatherings. 
+          </h1> */}
+          {/* <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+            Join us for worship services, prayer meetings, and community gatherings.
             There's always a place for you at St. Peters Church.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -165,7 +169,7 @@ const EventsPage = () => {
                         {event.date.split(" ")[0]}
                       </span>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
@@ -210,7 +214,7 @@ const EventsPage = () => {
             Want to Get Involved?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-            We're always looking for volunteers to help with events, outreach programs, 
+            We're always looking for volunteers to help with events, outreach programs,
             and church activities. Join our community of service.
           </p>
           <Button variant="gold" size="lg">

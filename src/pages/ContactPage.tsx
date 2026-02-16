@@ -17,38 +17,44 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: "Address",
-      lines: ["Church Street", "Cuddalore, Tamil Nadu", "India - 607001"],
+      lines: ["St Peter's Cathedral", " Gnanapuram ", " Visakhapatnam ", " Andhra Pradesh ", "India - 530 004"],
     },
     {
       icon: Phone,
       title: "Phone",
-      lines: ["+91 4142 123456", "+91 98765 43210"],
+      lines: ["+91 98490 07248 ", "+91 91213 17496"],
     },
     {
       icon: Mail,
       title: "Email",
-      lines: ["info@stpeterschurch.in", "pastor@stpeterschurch.in"],
+      lines: ["stpeterscathedral22@gmail.com"],
     },
     {
       icon: Clock,
       title: "Service Times",
-      lines: ["Sunday: 9:00 AM", "Wednesday: 6:30 PM", "Saturday Youth: 5:00 PM"],
+      lines: ["Sunday: 6:30 AM, 8:30 AM, 6:00 PM (Telugu), 8:30 AM (English)", "Weekdays: 6:15 AM, 6:30 PM", "Every Friday: Fasting Prayer Service from 10 AM at Rakshanagiri "],
     },
   ];
 
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark"
+
+        style={{
+          backgroundImage: "url('/images/66.jpg')", backgroundSize: "100% auto", backgroundPosition: "center", width: "100%", height: "450px",
+        }}
+
+      >
         <div className="container-church px-4 text-center">
-          <MapPin className="w-16 h-16 mx-auto mb-6 text-gold" />
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+          {/* <MapPin className="w-16 h-16 mx-auto mb-6 text-gold" /> */}
+          {/* <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             Contact <span className="text-gradient-gold">Us</span>
           </h1>
           <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            We'd love to hear from you. Reach out with any questions, prayer requests, 
+            We'd love to hear from you. Reach out with any questions, prayer requests,
             or just to say hello.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -84,19 +90,19 @@ const ContactPage = () => {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="name">Full Name *</Label>
-                          <Input 
-                            id="name" 
-                            placeholder="Your name" 
+                          <Input
+                            id="name"
+                            placeholder="Your name"
                             className="mt-1"
                             required
                           />
                         </div>
                         <div>
                           <Label htmlFor="email">Email *</Label>
-                          <Input 
-                            id="email" 
-                            type="email" 
-                            placeholder="your@email.com" 
+                          <Input
+                            id="email"
+                            type="email"
+                            placeholder="your@email.com"
                             className="mt-1"
                             required
                           />
@@ -106,17 +112,17 @@ const ContactPage = () => {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="phone">Phone Number</Label>
-                          <Input 
-                            id="phone" 
-                            placeholder="+91 98765 43210" 
+                          <Input
+                            id="phone"
+                            placeholder="Your number"
                             className="mt-1"
                           />
                         </div>
                         <div>
                           <Label htmlFor="subject">Subject *</Label>
-                          <Input 
-                            id="subject" 
-                            placeholder="How can we help?" 
+                          <Input
+                            id="subject"
+                            placeholder="How can we help?"
                             className="mt-1"
                             required
                           />
@@ -180,7 +186,7 @@ const ContactPage = () => {
                 />
               </div>
               <p className="text-center text-sm text-muted-foreground mt-4">
-                St. Peters Church, Church Street, Cuddalore, Tamil Nadu 607001
+                St. Peter's Cathedral,  Gnanapuram ,  Visakhapatnam ,  Andhra Pradesh , India - 530 004.
               </p>
             </div>
           </div>

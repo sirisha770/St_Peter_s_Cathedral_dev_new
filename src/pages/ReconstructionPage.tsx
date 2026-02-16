@@ -22,13 +22,15 @@ const ReconstructionPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div 
+      <section className="relative py-20 md:py-32 overflow-hidden"
+        style={{ backgroundImage: "url('/images/66.jpg')", backgroundSize: "100% auto", backgroundRepeat: "no-repeat", width: "100%", backgroundPosition: "center", }}
+      >
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${reconstructionImage})` }}
+        // style={{ backgroundImage: `url(${reconstructionImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 to-navy/80" />
-        
+        <div className="absolute inset-0 bg-gradient-to-r " />
+
         <div className="relative z-10 container-church px-4">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 bg-gold/20 text-gold-light rounded-full text-sm font-medium mb-6">
@@ -38,7 +40,7 @@ const ReconstructionPage = () => {
               Restoring Our <span className="text-gradient-gold">Sacred Heritage</span>
             </h1>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl">
-              After years of weathering and natural wear, our beloved St. Peters Church needs 
+              After years of weathering and natural wear, our beloved St. Peters Church needs
               urgent restoration to preserve this sacred space for generations to come.
             </p>
             <Button variant="gold" size="xl" asChild>
@@ -58,21 +60,21 @@ const ReconstructionPage = () => {
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
               Why We Need Your Help
             </h2>
-            
+
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-6">
-                Built in 1892, St. Peters Church has stood as a beacon of faith in Cuddalore for 
-                over 130 years. This historic structure has witnessed countless baptisms, weddings, 
+                Built in 1892, St. Peters Church has stood as a beacon of faith in Cathedral for
+                over 130 years. This historic structure has witnessed countless baptisms, weddings,
                 and funeral services, serving as the spiritual home for generations of faithful Christians.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                Over the decades, the building has suffered significant damage from monsoons, 
-                cyclones, and the passage of time. The roof leaks during heavy rains, the 
+                Over the decades, the building has suffered significant damage from monsoons,
+                cyclones, and the passage of time. The roof leaks during heavy rains, the
                 walls show concerning cracks, and the electrical systems are dangerously outdated.
               </p>
               <p className="text-lg leading-relaxed">
-                Without immediate intervention, we risk losing this irreplaceable piece of our 
-                community's heritage. Your generous donations will help us restore the church 
+                Without immediate intervention, we risk losing this irreplaceable piece of our
+                community's heritage. Your generous donations will help us restore the church
                 to its former glory while making it safe and accessible for all.
               </p>
             </div>
@@ -99,7 +101,7 @@ const ReconstructionPage = () => {
               <p className="text-muted-foreground">raised of ₹1,00,00,000 goal</p>
             </div>
             <div className="h-4 bg-muted rounded-full overflow-hidden mb-4">
-              <div 
+              <div
                 className="h-full bg-gradient-to-r from-gold to-gold-light rounded-full"
                 style={{ width: "45%" }}
               />
@@ -117,23 +119,21 @@ const ReconstructionPage = () => {
             </h3>
             <div className="space-y-4">
               {milestones.map((milestone, index) => (
-                <div 
+                <div
                   key={index}
-                  className={`flex items-center gap-4 p-4 rounded-xl border ${
-                    milestone.status === "completed" 
-                      ? "bg-green-50 border-green-200" 
-                      : milestone.status === "in-progress"
+                  className={`flex items-center gap-4 p-4 rounded-xl border ${milestone.status === "completed"
+                    ? "bg-green-50 border-green-200"
+                    : milestone.status === "in-progress"
                       ? "bg-gold/5 border-gold/30"
                       : "bg-card border-border"
-                  }`}
+                    }`}
                 >
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${
-                    milestone.status === "completed"
-                      ? "bg-green-500"
-                      : milestone.status === "in-progress"
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${milestone.status === "completed"
+                    ? "bg-green-500"
+                    : milestone.status === "in-progress"
                       ? "bg-gold"
                       : "bg-muted"
-                  }`}>
+                    }`}>
                     {milestone.status === "completed" ? (
                       <CheckCircle className="w-6 h-6 text-white" />
                     ) : milestone.status === "in-progress" ? (
@@ -147,13 +147,12 @@ const ReconstructionPage = () => {
                     <h4 className="font-semibold text-foreground">{milestone.title}</h4>
                     <p className="text-sm text-muted-foreground">{milestone.description}</p>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    milestone.status === "completed"
-                      ? "bg-green-100 text-green-700"
-                      : milestone.status === "in-progress"
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${milestone.status === "completed"
+                    ? "bg-green-100 text-green-700"
+                    : milestone.status === "in-progress"
                       ? "bg-gold/20 text-gold-dark"
                       : "bg-muted text-muted-foreground"
-                  }`}>
+                    }`}>
                     {milestone.status === "completed" ? "Completed" : milestone.status === "in-progress" ? "In Progress" : "Upcoming"}
                   </span>
                 </div>
@@ -185,7 +184,7 @@ const ReconstructionPage = () => {
                     <span className="font-semibold text-gold">{item.amount}</span>
                   </div>
                   <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div 
+                    <div
                       className="h-full bg-gradient-to-r from-gold to-gold-light rounded-full"
                       style={{ width: `${item.percentage}%` }}
                     />
@@ -207,7 +206,7 @@ const ReconstructionPage = () => {
               Join 1,250+ Donors
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8">
-              Your contribution, no matter the size, brings us closer to restoring this 
+              Your contribution, no matter the size, brings us closer to restoring this
               sacred space. Be part of this historic endeavor.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

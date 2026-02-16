@@ -15,31 +15,47 @@ const GalleryPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const galleryItems = [
-    { src: churchHeroImage, title: "St. Peters Church Exterior", category: "Church" },
-    { src: altarImage, title: "Beautiful Church Altar", category: "Church" },
-    { src: congregationImage, title: "Sunday Worship Service", category: "Events" },
-    { src: choirImage, title: "Church Choir Performance", category: "Events" },
-    { src: reconstructionImage, title: "Reconstruction Progress", category: "Reconstruction" },
-    { src: outreachImage, title: "Community Outreach Program", category: "Community" },
+    { src: "/images/29.jpg", title: "St. Peters Church Blessed Virgin Mary", category: "Church" },
+    { src: "/images/13.jpg", title: "St. Peters Church Sacred place", category: "Church" },
+    { src: "/images/61.jpg", title: "Beautiful Church Altar", category: "Church" },
+    { src: "/images/55.jpg", title: "Sunday Worship Service", category: "Events" },
+    { src: "/images/49.jpg", title: "Church Youth Fellowship Gathering", category: "Youth Ministry" },
+    { src: "/images/70.jpg", title: "Reconstruction Progress", category: "Reconstruction" },
+    { src: "/images/62.jpg", title: "Sacred Altar", category: "Church" },
+    { src: "/images/63.jpg", title: "Holy Tabernacle", category: "Church" },
+    { src: "/images/64.jpg", title: "Mass Celebration", category: "Church" },
+    { src: "/images/57.jpg", title: "Youth Christmas Moments", category: "Church" },
+    { src: "/images/30.jpg", title: "Grotto Church", category: "Church" },
+    { src: "/images/12.jpg", title: "Prayer Of Burial", category: "Community" },
+
+
+
+
+
+
   ];
 
-  const filteredItems = activeCategory === "All" 
-    ? galleryItems 
+  const filteredItems = activeCategory === "All"
+    ? galleryItems
     : galleryItems.filter(item => item.category === activeCategory);
 
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy via-navy to-navy-dark"
+        style={{
+          backgroundImage: "url('/images/66.jpg')", backgroundSize: "100% auto", backgroundPosition: "center", width: "100%", height: "450px",
+        }}
+      >
         <div className="container-church px-4 text-center">
-          <Camera className="w-16 h-16 mx-auto mb-6 text-gold" />
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-            Photo <span className="text-gradient-gold">Gallery</span>
-          </h1>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Explore moments of faith, community, and our reconstruction journey 
+          {/* <Camera className="w-16 h-16 mx-auto mb-6 text-gold" /> */}
+          {/* <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+            Photo  <span className="text-gradient-gold">Gallery</span>
+          </h1> */}
+          {/* <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+            Explore moments of faith, community, and our reconstruction journey
             through these cherished photographs.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -52,11 +68,10 @@ const GalleryPage = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                  activeCategory === category
-                    ? "bg-gold text-navy-dark"
-                    : "bg-muted text-muted-foreground hover:bg-gold/20 hover:text-gold"
-                }`}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === category
+                  ? "bg-gold text-navy-dark"
+                  : "bg-muted text-muted-foreground hover:bg-gold/20 hover:text-gold"
+                  }`}
               >
                 {category}
               </button>
@@ -101,7 +116,7 @@ const GalleryPage = () => {
 
       {/* Lightbox */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-navy/95 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >

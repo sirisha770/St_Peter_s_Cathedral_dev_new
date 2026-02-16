@@ -41,23 +41,23 @@ const AboutPage = () => {
     <div>
       {/* Hero */}
       <section className="relative py-20 md:py-32 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${churchHeroImage})` }}
+          style={{ backgroundImage: "url('/images/66.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 to-navy/80" />
-        
+        <div className="absolute inset-0 bg-gradient-to-r " />
+
         <div className="relative z-10 container-church px-4">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-gold/20 text-gold-light rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium mb-6">
               Our Story
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              About <span className="text-gradient-gold">St. Peters Church</span>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              About <span className="text-white">St. Peters Church</span>
             </h1>
-            <p className="text-lg text-primary-foreground/80 max-w-2xl">
-              For over 130 years, we have been a beacon of faith, hope, and love 
-              in Cuddalore. Our rich history and vibrant community continue to 
+            <p className="text-lg text-white max-w-2xl">
+              For over 130 years, we have been a beacon of faith, hope, and love
+              in Cathedral. Our rich history and vibrant community continue to
               inspire generations.
             </p>
           </div>
@@ -70,26 +70,26 @@ const AboutPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Church className="w-12 h-12 text-gold mb-4" />
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
                 A Legacy of Faith Since 1892
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  St. Peters Church was established in 1892 by devoted British missionaries 
-                  who sought to bring the Gospel to the coastal town of Cuddalore. What began 
-                  as a small prayer group has grown into one of the most cherished churches 
+                  St. Peters Church was established in 1892 by devoted British missionaries
+                  who sought to bring the Gospel to the coastal town of Cathedral. What began
+                  as a small prayer group has grown into one of the most cherished churches
                   in Tamil Nadu.
                 </p>
                 <p>
-                  The church's distinctive architecture, with its tall bell tower and 
-                  beautiful stained glass windows, reflects the colonial heritage while 
-                  embracing local traditions. The building itself is a testament to the 
+                  The church's distinctive architecture, with its tall bell tower and
+                  beautiful stained glass windows, reflects the colonial heritage while
+                  embracing local traditions. The building itself is a testament to the
                   dedication of countless faithful who contributed to its construction.
                 </p>
                 <p>
-                  Through world wars, natural disasters, and changing times, St. Peters 
-                  Church has remained a constant source of spiritual nourishment and 
-                  community support for the people of Cuddalore.
+                  Through world wars, natural disasters, and changing times, St. Peters
+                  Church has remained a constant source of spiritual nourishment and
+                  community support for the people of Cathedral.
                 </p>
               </div>
             </div>
@@ -132,9 +132,10 @@ const AboutPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card flex flex-col md:flex-row gap-8 items-center">
               <div className="w-48 h-48 rounded-2xl overflow-hidden flex-shrink-0">
-                <img 
-                  src={pastorImage} 
-                  alt="Parish Priest" 
+                <img
+                  // src={pastorImage}
+                  src="/images/71.jpg"
+                  alt="Parish Priest"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -143,12 +144,12 @@ const AboutPage = () => {
                   Parish Priest
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
-                  Rev. Fr. Thomas Abraham
+                  Rev. Fr. John Prakash
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Fr. Thomas has been serving St. Peters Church since 2018. With over 25 years 
-                  of pastoral experience, he leads our congregation with compassion, wisdom, 
-                  and a deep commitment to serving the community. Under his leadership, the 
+                  Fr. John Prakash has been serving St. Peters Church since 2018. With over 25 years
+                  of pastoral experience, he leads our congregation with compassion, wisdom,
+                  and a deep commitment to serving the community. Under his leadership, the
                   church has grown both spiritually and in its outreach efforts.
                 </p>
                 <p className="text-sm text-gold italic">
@@ -169,7 +170,7 @@ const AboutPage = () => {
               Our Mission & Values
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We exist to glorify God, make disciples of Jesus Christ, and serve our 
+              We exist to glorify God, make disciples of Jesus Christ, and serve our
               community with love and compassion.
             </p>
           </div>
@@ -199,7 +200,7 @@ const AboutPage = () => {
             Join Our Family
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-            Whether you're looking for a church home or just visiting, 
+            Whether you're looking for a church home or just visiting,
             you're always welcome at St. Peters Church.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
